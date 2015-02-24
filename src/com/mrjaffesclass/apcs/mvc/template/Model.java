@@ -58,7 +58,7 @@ public class Model implements MessageHandler {
      * @return value of maximum permissable age
      */
   public int calculateMax() {
-      int v = (age - 7) * 2;
+      int v = (age - 7)*2;
       return v;
   }
   
@@ -66,10 +66,11 @@ public class Model implements MessageHandler {
      * @return value of minimum permissable age
      */
   public int calculateMin() {
+      int v;
       if(age%2 != 0) { //so that age divided by two is a whole number
-         age--;
+         v = ((age/2)+7);
       }
-      int v = (age/2) + 7;
+      v = (age/2) + 8;
       return v;
   }
 
